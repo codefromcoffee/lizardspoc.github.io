@@ -2,7 +2,7 @@
 
 category: blog
 
-layout: post
+layout: blog
 
 title: You're up and running!
 -----------------------------

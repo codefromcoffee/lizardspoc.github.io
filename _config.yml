@@ -52,7 +52,8 @@ baseurl: ""
 #
 # !! You don't need to change any of the configuration flags below !!
 #
-permalink: /blog/:categories/:year/:month/:day/:title.html
+# permalink: /blog/:categories/:year/:month/:day/:title.html
+permalink: /blog/:title.html
 
 markdown: redcarpet
 highlighter: pygments
