@@ -1,6 +1,6 @@
 ---
 
-permalink: "/blog/"
+categories: - _blog
 
 layout: post
 
