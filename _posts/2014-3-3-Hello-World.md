@@ -1,6 +1,6 @@
 ---
 
-categories: - _blog
+categories: blog
 
 layout: post
 
