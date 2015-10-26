@@ -1,0 +1,4 @@
+jekyll build
+jekyll build --watch
+jekyll serve
+jekyll serve --detach
