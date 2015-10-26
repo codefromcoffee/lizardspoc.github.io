@@ -57,6 +57,8 @@ markdown: redcarpet
 highlighter: pygments
 permalink: /:title/
 
+permalink: /blog/:title.html
+
 # The release of Jekyll Now that you're using
 version: v1.1.0
 
@@ -75,3 +77,6 @@ exclude:
     - LICENSE
     - README.md
     - CNAME
+
+include:
+    - _blog
