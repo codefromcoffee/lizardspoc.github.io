@@ -1,94 +1,92 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Perspective Page View Navigation</title>
-		<meta name="description" content="Perspective Page View Navigation: Transforms the page in 3D to reveal a menu" />
-		<meta name="keywords" content="3d page, menu, navigation, mobile, perspective, css transform, web development, web design" />
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+        {% include meta.html %}
+        
+		<meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views" />
+		<meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth" />
 		<meta name="author" content="Geerhardt van Deventer" />
-
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
-    {% include meta.html %}
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/normalize.css" />
+		<!-- <link rel="shortcut icon" href="../favicon.ico"> -->
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/demo.css" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/icons.css" />
 		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/component.css" />
+		<script src="{{ site.baseurl }}/modernizr.custom.js"></script>
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!-- Site Styles -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Bootstrap library -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load -->
-		<script src="{{ site.baseurl }}/modernizr.custom.25376.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="{{ site.baseurl }}/site.css">
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
-  <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-            <label style="color: white; font-size: 22px;" class="lead">{{ site.name }}</label>
-            <label style="color: orange; font-size: 14px;" class="lead">{{ site.description }}</label>
-          </a>
-        </div>
-      </div>
-    </nav>
-		<div id="perspective" class="perspective effect-airbnb">
-
-			<div class="container">
-
-				<div class="wrapper"><!-- wrapper needed for scroll -->
-					<!-- Top Navigation -->
-					<div class="codrops-top clearfix">
-						<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/ProgressButtonStyles/"><span>Previous Demo</span></a>
-						<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=17915"><span>Back to the Codrops Article</span></a></span>
-					</div>
-					<header class="codrops-header">
-						<h1>Perspective Page View Navigation <span>Transforms the page in 3D to reveal a menu</span></h1>
-					</header>
-					<div class="main clearfix">
-						<div class="column">
-							<p><button id="showMenu">Show Menu</button></p>
-							<p>Click on this button to see the content being pushed away in 3D to reveal a navigation or other items.</p>
-						</div>
-					</div><!-- /main -->
-				</div><!-- wrapper -->
-			</div><!-- /container -->
-			<nav class="outer-nav left vertical">
-				<a href="{{ site.baseurl }}" class="icon-home">Home</a>
-				<a href="#" class="icon-news">Blog</a>
-				<a href="#" class="icon-image">Cheats</a>
-				<a href="#" class="icon-upload">Projects</a>
-				<a href="{{ site.baseurl }}/about" class="icon-star">About</a>
-				<!-- <a href="#" class="icon-mail">Messages</a>
-				<a href="#" class="icon-lock">Security</a> -->
+	</head>
+	<body>
+		<div id="st-container" class="st-container">
+			<!--
+				example menus
+				these menus will be on top of the push wrapper
+			-->
+			<nav class="st-menu st-effect-11" id="menu-11">
+<!--				<h2 class="fa fa-home"> home</h2>-->
+<!--					<h2 class="fa fa-home"> home</h2>-->
+<h2>
+					<i class="fa fa-hand-rock-o"></i>
+					<i class="fa fa-hand-paper-o"></i>
+					<i class="fa fa-hand-scissors-o"></i>
+					<i class="fa fa-hand-lizard-o"></i>
+					<i class="fa fa-hand-spock-o"></i>
+					</h2>
+				<ul>
+					<li><a class="fa fa-home fa-lg" href="#"> home</a></li>
+					<li><a class="fa fa-book fa-lg" href="#"> blog</a></li>
+					<li><a class="fa fa-lightbulb-o fa-lg" href="#"> projects</a></li>
+					<li><a class="fa fa-life-ring fa-lg" href="#"> cheatsheets</a></li>
+					<li><a class="fa fa-envelope-o fa-lg" href="#"> contact</a></li>
+					<li><a class="fa fa-coffee fa-lg" href="#"> about</a></li>
+				</ul>
 			</nav>
-      {{ content }}
-		</div><!-- /perspective -->
+
+			<!-- content push wrapper -->
+
+			<div class="st-pusher">
+				<div class="st-content"><!-- this is the wrapper for the content -->
+					<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+						<!-- Top Navigation -->
+					    <div id="st-trigger-effects" data-spy="affix">
+							<button type="button" class="btn btn-default btn-md menu_button" data-effect="st-effect-11">
+								<span class="glyphicon glyphicon-menu-hamburger"></span>
+							</button>
+
+							<span><a class="site_title lead" href="/">{{ site.name }}</a></span>
+							<span class="site_tag_line">{{ site.description }}</span>
+
+						</div>
+
+						<div class="main clearfix main_content">
+
+							<h2 class="text-center">blog header</h2>
+							<hr/>
+                {{ content }}
+						</div><!-- /main -->
+					</div><!-- /st-content-inner -->
+				</div><!-- /st-content -->
+			</div><!-- /st-pusher -->
+		</div><!-- /st-container -->
 		<script src="{{ site.baseurl }}/classie.js"></script>
-		<script src="{{ site.baseurl }}/menu.js"></script>
-		<!-- For the demo ad only -->
-<!-- <script src="javascripts/demoad.js"></script> -->
+		<script src="{{ site.baseurl }}/sidebarEffects.js"></script>
 	</body>
-      {% include analytics.html %}
+        {% include analytics.html %}
 </html>

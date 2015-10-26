@@ -1,0 +1,20 @@
+.site_title {
+	color: orange;
+	font-size: 20px;
+}
+
+.site_tag_line {
+	padding-left: 5px;
+	font-size: 14px;
+	font-style: italic;
+}
+
+.main_content {
+	padding-left: 25px;
+	padding-top: 20px;
+/*	margin-top: 200px;*/
+}
+
+.menu_button {
+	margin: 5px;
+}
