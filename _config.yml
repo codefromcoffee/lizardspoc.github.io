@@ -52,13 +52,14 @@ baseurl: ""
 #
 # !! You don't need to change any of the configuration flags below !!
 #
-permalink: /blog/:categories/:year/:month/:day/:title.html
+# permalink: /blog/:categories/:year/:month/:day/:title.html
 # permalink: /blog/:title.html
 
 markdown: redcarpet
 highlighter: pygments
-permalink: /:title/
-# permalink: /:categories/:title
+#permalink: /:title/
+#permalink: /:categories/:title
+permalink: /:categories/:year/:month/:day/:title.html
 
 # The release of Jekyll Now that you're using
 version: v1.1.0
