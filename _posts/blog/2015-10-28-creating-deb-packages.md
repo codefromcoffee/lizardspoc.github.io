@@ -3,11 +3,9 @@ layout: post
 title: Creating .deb packages
 published: true
 date: 2015-10-28
-categories: [blogging]
-tags: [blogging]
+categories: [blog]
+tags: [linux,apt,deb]
 ---
-# Creating .deb packages
-
 Some stuff
 
 Some more stuff
