@@ -2,3 +2,5 @@ jekyll build
 jekyll build --watch
 jekyll serve
 jekyll serve --detach
+
+building site locally: http://stackoverflow.com/questions/28249255/how-do-i-configure-github-to-use-non-supported-jekyll-site-plugins/28252200#28252200
