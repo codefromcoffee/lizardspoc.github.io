@@ -5,4 +5,6 @@ layout: page
 sitemap: false
 ---
 
+# Blog
+
 This is the placeholder for my blog landing page.
