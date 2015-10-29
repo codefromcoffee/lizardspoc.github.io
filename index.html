@@ -9,14 +9,14 @@ layout: default
       <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
 
       <div class="entry">
-	<!--{{ post.excerpt }}-->
-	<!--{{ post.content | strip_html | truncatewords: 50 }}-->
 	{{ post.excerpt }}
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
     {% endfor %}
+    
+    
   
 <!--  {% for post in site.blog.posts %}
     <article class="post">
