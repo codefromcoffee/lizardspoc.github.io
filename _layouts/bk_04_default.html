@@ -5,9 +5,11 @@
 	<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
 	{% include meta.html %} 
+	
 	{% include header_resources.html %} 
+	
 	{% include rss.html %}
-
+	
 </head>
 
 <body>
@@ -29,23 +31,52 @@
 				<div class="st-content-inner">
 					<!-- extra div for emulating position:fixed of the menu -->
 					<!-- Top Navigation -->
-					<div class="container-fluid" data-spy="affix" style="z-index:100;">
-						<div class="row" style="z-index:100; background-color: white;">
+					<div class="container-fluid" data-spy="affix" style="z-index:100; background-color: black;">
+						<div class="row">
 							<div class="col-sm-12">
 								<div id="st-trigger-effects" class="pull-left center-block" style="margin-top:5px;margin-bottom:5px;">
-									<a href="{{ site.baseurl }}/" style="margin-left:5px; color:#FF9900;" class="lead justify">{{ site.name }}</a>
+									<span style="margin-left:5px; color:#FF9900;" class="lead justify">code from coffee</span>
 									<button type="button" class="btn btn-default pull-left btn-sm" data-effect="st-effect-11">
+										<!--<span class="glyphicon glyphicon-menu-hamburger"></span>-->
 										<i class="fa fa-bars fa-lg"></i>
 									</button>
 									<small>
-										<span style="font-style: italic; color: #000000">{{ site.description }}</span>
-									</small>
+									<span style="font-style: italic; color: #FFFFFF">live.in.mind</span>
+								</small>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!--<div class="main clearfix main_content container-fluid">-->
-					<div class="main clearfix main_content container-fluid">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-12 text-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-default btn-xs"><i class="fa fa-calendar"></i> date</button>
+									<button type="button" class="btn btn-default btn-xs"><i class="fa fa-tags"></i> tags</button>
+								</div>
+							</div>
+						</div>
+						<br/>
+					</div>
+
+
+					<!--<div id="st-trigger-effects" data-spy="affix">
+						<button type="button" class="btn btn-default btn-md menu_button" data-effect="st-effect-11">
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+						</button>
+
+						<span><a class="site_title lead" href="/">{{ site.name }}</a></span>
+						<span class="site_tag_line">{{ site.description }}</span>
+
+					</div>-->
+
+					<div class="main clearfix main_content">
+
+						<!-- <h2 class="text-center">{{ page.title }}</h2>
+						  <hr/> -->
+
+						<!-- <h2 class="text-center">blog header</h2>
+							<hr/> -->
 						{{ content }}
 					</div>
 					<!-- /main -->
@@ -63,5 +94,4 @@
 
 {% include analytics.html %}
 
-{% include svg-icons.html %}
 </html>

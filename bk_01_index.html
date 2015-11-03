@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <div class="btn-group">
+      <button type="button" class="btn btn-default btn-xs"><i class="fa fa-calendar"></i> date</button>
+      <button type="button" class="btn btn-default btn-xs"><i class="fa fa-tags"></i> tags</button>
+    </div>
+  </div>
+</div>
+
+<div class="posts">
+  {% for post in site.posts %}
+  <article class="post">
+
+    <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+
+    <div class="entry">
+      {{ post.excerpt }}
+    </div>
+
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+  </article>
+  {% endfor %}
+
+
+
+  <!--  {% for post in site.blog.posts %}
+    <article class="post">
+
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <h2 class="text-center"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <hr/>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}-->
+</div>
