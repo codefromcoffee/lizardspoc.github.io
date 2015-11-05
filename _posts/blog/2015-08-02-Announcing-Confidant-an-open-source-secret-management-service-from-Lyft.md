@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Announcing Confidant an open source secret management service from Lyft
-published: true
+published: false
 date: 2015-08-02
 categories: [blog]
 tags: [linux,apt,deb]

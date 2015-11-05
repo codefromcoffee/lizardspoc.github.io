@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Googling stuff can cause us to overestimate our own knowledge
-published: true
+published: false
 date: 2015-10-28
 categories: [blog]
 tags: [linux,shell,script]
