@@ -30,6 +30,12 @@
 <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
 
 <style>
+	/*a:hover {
+		background: #FFDD00;
+		color: #AAAAAA;
+		text-decoration: none;
+	}*/	
+	
 	hr {
 		display: block;
 		position: relative;
@@ -84,5 +90,19 @@
 	
 	.affix + .container-fluid {
 		padding-top: 50px;
+	}
+	
+	#disqus_thread {
+		position: relative;
+	}
+	
+	#disqus_thread:after {
+		content: "";
+		display: block;
+		height: 55px;
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		background:white;
 	}
 </style>

@@ -33,16 +33,27 @@
 						<div class="row" style="z-index:100; background-color: white;">
 							<div class="col-sm-12">
 								<div id="st-trigger-effects" class="pull-left center-block" style="margin-top:5px;margin-bottom:5px;">
-									<a href="{{ site.baseurl }}/" style="margin-left:5px; color:#FF9900;" class="lead justify">{{ site.name }}</a>
+									<span style="border-bottom: solid 2px #FF9900; margin-left: 5px;">
+										<a 
+										href="{{ site.baseurl }}/" 
+										style="margin-left:5px; color:#FF9900; font-size:20px; font-weight:bold;" 
+										class="lead justify site_title">{{ site.name }}</a>
+										<small>
+											<span style="font-style: italic; color: #000000; font-size: 14px;">
+												{{ site.description }}</span>
+										</small>
+									</span>									
 									<button type="button" class="btn btn-default pull-left btn-sm" data-effect="st-effect-11">
 										<i class="fa fa-bars fa-lg"></i>
 									</button>
-									<small>
-										<span style="font-style: italic; color: #000000">{{ site.description }}</span>
-									</small>
 								</div>
 							</div>
 						</div>
+						<!--<div class="row">
+							<div class="col-sm-12" style="border-top: solid 1px #FF9900;">
+								<hr/>
+							</div>
+						</div>-->
 					</div>
 					<!--<div class="main clearfix main_content container-fluid">-->
 					<div class="main clearfix main_content container-fluid">

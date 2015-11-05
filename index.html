@@ -2,24 +2,30 @@
 layout: default
 ---
 
-<div class="row">
+<!--<div class="row">
   <div class="col-sm-12 text-center">
     <div class="btn-group">
       <button type="button" class="btn btn-default btn-xs"><i class="fa fa-calendar"></i> date</button>
       <button type="button" class="btn btn-default btn-xs"><i class="fa fa-tags"></i> tags</button>
     </div>
   </div>
-</div>
+</div>-->
+
+<!--TODO: filter by actual BLOG entries (category: blog)-->
 
 {% for post in site.posts %}
 <div class="row">
   <div class="col-sm-12">
-    <h4 style="margin-left:0px;"><a href="{{ site.baseurl }}{{ post.url }}" style="margin-left:0px; color:#000000;">{{ post.title }}</a></h4>
+    <div class="h3" style="margin-left:0px;"><a href="{{ site.baseurl }}{{ post.url }}" style="margin-left:0px; color:#000000;">{{ post.title }}</a></div>
+    <!--<h3 style="margin-left:0px;"><a href="{{ site.baseurl }}{{ post.url }}" style="margin-left:0px; color:#000000;">{{ post.title }}</a></h3>-->
   </div>
 </div>
 <div class="row">
   <div class="col-sm-12">
-    <p style="font-style: italic;">{{ post.excerpt }}</p>
+    <!--<span style="float: left; color: #FF9900;">{{ post.date | date: "%Y/%m/%d" }}</span>-->
+    <!--<span style="float: left; color: #FF9900;"><i class="fa fa-coffee fa-md"></i></span>-->
+    <!--<span style="float: left; margin-left: 3px; color: #FF9900">{{ post.excerpt }}</span>-->
+    <span style="float: left; margin-left: 3px; color: #FF9900">{{ post.content | truncatewords:50 }}</span>
   </div>
 </div>
 {% endfor %}
