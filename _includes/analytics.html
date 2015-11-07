@@ -9,7 +9,8 @@
 		ga('create', '{{ site.google_analytics }}', 'auto');
 		ga('send', 'pageview', {
 		  'page': '{{ page.url }}',
-		  'title': '{{ page.title | replace: "'", "\\'" }}'
+		//   'title': '{{ page.title | replace: "'", "\\'" }}'
+		'title': '{{ page.title }}'
 		});
 	</script>
 	<!-- End Google Analytics -->

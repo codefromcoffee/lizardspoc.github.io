@@ -206,3 +206,14 @@
   .gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short  {
     color: #008000;
   }
+  
+  .gsc-selected-option {
+    position: relative;
+    width: 100%;
+}
+
+.gsc-orderby-container {
+    text-align: right;
+    background: transparent;
+    visibility: hidden;
+}

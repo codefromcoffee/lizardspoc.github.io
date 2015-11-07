@@ -69,33 +69,30 @@
 								<form role="search" method="get" class="search-form"> 
 									<div class="form-group has-feedback"> 
 										<label for="search" class="sr-only">Search</label> 
-										<input id="searchString" name="searchString" type="text" class="form-control" placeholder="search..."> 
+										<input id="q" name="q" type="text" class="form-control" placeholder="search..."> 
 										<span class="glyphicon glyphicon-search form-control-feedback"></span> 
 									</div> 
 								</form> 
 							</div> 
-						</div>						
-					</div>
-					
-					<div class="row"> 
-						<div class="col-sm-12 text-right"> 
-							<div id="home-search" class="home">
-							<script>
-								(function() {
-								var cx = '010472338623826682351:xzzfzca16dc';
-								var gcse = document.createElement('script');
-								gcse.type = 'text/javascript';
-								gcse.async = true;
-								gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-								'//www.google.com/cse/cse.js?cx=' + cx;
-								var s = document.getElementsByTagName('script')[0];
-								s.parentNode.insertBefore(gcse, s);
-								})();
-							</script>
-							
-							<gcse:search queryParameterName="searchString"></gcse:search>
-							</div>
 						</div>
+						
+					<div class="row"> 
+						<div class="col-sm-12"> 
+<script>
+  (function() {
+    var cx = '010472338623826682351:xzzfzca16dc';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchresults-only></gcse:searchresults-only>
+						</div>
+					</div>												
 					</div>				
 					
 					<div class="main clearfix main_content container-fluid">
