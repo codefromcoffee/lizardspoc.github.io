@@ -37,7 +37,8 @@
 	background-color: #fff; 
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; 
 	border-radius: 25px; 
-	border: 1px solid #ccc; 
+	border: 1px solid #FF9900;
+  margin-left: 5px; 
 } 
 
 .search-form .form-group input.form-control { 
