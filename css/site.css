@@ -218,3 +218,13 @@
     background: transparent;
     visibility: hidden;
 }
+
+/*
+  social buttons
+*/
+.social {
+  color: #FF9900;
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
