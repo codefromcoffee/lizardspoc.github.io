@@ -229,7 +229,26 @@
   margin-right: 5px;
 }
 
+/* unvisited link */
+.social:link {
+    text-decoration: none;
+    color: #FF9900;
+}
+
+/* visited link */
+.social:visited {
+    text-decoration: none;
+    color: #FF9900;
+}
+
+/* mouse over link */
 .social:hover {
+    text-decoration: none;
+    color: #FF9900;
+}
+
+/* selected link */
+.social:active {
     text-decoration: none;
     color: #FF9900;
 }
