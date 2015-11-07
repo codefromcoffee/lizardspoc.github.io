@@ -228,3 +228,8 @@
   margin-left: 5px;
   margin-right: 5px;
 }
+
+.social:hover {
+    text-decoration: none;
+    color: #FF9900;
+}
