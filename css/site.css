@@ -32,8 +32,8 @@
 .search-form .form-group { 
 	float: right !important; 
 	transition: all 0.35s, border-radius 0s; 
-	width: 32px; 
-	height: 32px; 
+	width: 25px; 
+	height: 25px; 
 	background-color: #fff; 
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; 
 	border-radius: 25px; 
@@ -76,9 +76,9 @@
 	right: -2px; 
 	z-index: 2; 
 	display: block; 
-	width: 34px; 
-	height: 34px; 
-	line-height: 34px; 
+	width: 25px; 
+	height: 25px; 
+	line-height: 25px; 
 	text-align: center; 
 	color: #FF9900; 
 	left: initial; 
