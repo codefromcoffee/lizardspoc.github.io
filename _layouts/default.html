@@ -65,15 +65,16 @@
 						</div>-->
 						
 						<div class="row"> 
-							<div class="col-sm-12 text-right"> 
-								<form role="search" method="get" class="search-form"> 
+							<div class="col-sm-12 text-right" > 
+								<form role="search" method="get" class="search-form">
+									{% include social-icons.html %} 
 									<div class="form-group has-feedback"> 
 										<label for="search" class="sr-only">Search</label> 
 										<input id="q" name="q" type="text" class="form-control" placeholder="search..."> 
 										<span class="glyphicon glyphicon-search form-control-feedback"></span> 
 									</div> 
 								</form> 
-							</div> 
+							</div>
 						</div>
 						
 					<div class="row"> 
@@ -109,11 +110,9 @@
 	<!-- /st-container -->
 	<script src="{{ site.baseurl }}/javascript/classie.js"></script>
 	<script src="{{ site.baseurl }}/javascript/sidebarEffects.js"></script>
+	
+	{% include analytics.html %}
 </body>
-
-{% include analytics.html %}
-
-{% include svg-icons.html %}
 </html>
 
 						<!--<div class="row">
