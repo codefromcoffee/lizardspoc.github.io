@@ -29,7 +29,7 @@
 
 <body style="height: 100%; padding-top: 35px; padding-bottom: 50px;">
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid" style="margin-top: 5px; margin-right: 15px;">
+        <div class="container-fluid" style="margin-top: 5px; margin-right: 15px; margin-left: 0px;">
             <span style="border-bottom: solid 2px #FF9900; margin-left: 5px;">
 										<a
 										href="{{ site.baseurl }}/"
@@ -50,20 +50,37 @@
         </div>
     </nav>
 
+<div class="hidden-xs hidden-lg hidden-md">
+<!--<span style="font-weight: bold; font-size: 20px;">small</span>-->
+</div>
+
+<div class="hidden-sm hidden-lg hidden-md">
+<!--<span style="font-weight: bold; font-size: 50px;">x-small</span>-->
+<br/>
+</div>
+
+<div class="hidden-sm hidden-xs hidden-md">
+<!--<span style="font-weight: bold; font-size: 20px;">large</span>-->
+</div>
+
+<div class="hidden-sm hidden-xs hidden-lg">
+<!--<span style="font-weight: bold; font-size: 20px;">medium</span>-->
+</div>
+
     <nav class="navbar navbar-default navbar-fixed-bottom hidden-lg hidden-md">
         <div class="container-fluid">
             <ul class="nav navbar-nav" style="margin: 0 auto;width: 100%;text-align: center;">
                 <li style="float: none;display: inline-block;">
-                    <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Home"><span class="glyphicon glyphicon-home style_bottom_menu" aria-hidden="true"></span></a>
+                    <a class="menu_tooltip" href="{{ site.baseurl }}/" data-toggle="tooltip" data-placement="auto right" title="Home"><span class="glyphicon glyphicon-home style_bottom_menu" aria-hidden="true"></span></a>
                 </li>
                 <li style="float: none;display: inline-block;">
-                    <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Archive"><span class="glyphicon glyphicon-book style_bottom_menu" aria-hidden="true"></span></a>
+                    <a class="menu_tooltip" href="{{ site.baseurl }}/archive" data-toggle="tooltip" data-placement="auto right" title="Archive"><span class="glyphicon glyphicon-book style_bottom_menu" aria-hidden="true"></span></a>
                 </li>
                 <li style="float: none;display: inline-block;">
-                    <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Projects"><span class="glyphicon glyphicon-cog style_bottom_menu" aria-hidden="true"></span></a>
+                    <a class="menu_tooltip" href="{{ site.baseurl }}/projects" data-toggle="tooltip" data-placement="auto right" title="Projects"><span class="glyphicon glyphicon-cog style_bottom_menu" aria-hidden="true"></span></a>
                 </li>
                 <li style="float: none;display: inline-block;">
-                    <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Cheats"><span class="glyphicon glyphicon-info-sign style_bottom_menu" aria-hidden="true"></span></a>
+                    <a class="menu_tooltip" href="{{ site.baseurl }}/cheats" data-toggle="tooltip" data-placement="auto right" title="Cheats"><span class="glyphicon glyphicon-info-sign style_bottom_menu" aria-hidden="true"></span></a>
                 </li>
             </ul>
         </div>
@@ -74,16 +91,16 @@
             <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
                 <ul class="nav nav-pills nav-stacked affix_side_menu" data-spy="affix" data-offset-top="35">
                     <li>
-                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="right" title="Home"><span class="glyphicon glyphicon-home style_side_menu" aria-hidden="true"></span></a>
+                        <a class="menu_tooltip" href="{{ site.baseurl }}/" data-toggle="tooltip" data-placement="right" title="Home"><span class="glyphicon glyphicon-home style_side_menu" aria-hidden="true"></span></a>
                     </li>
                     <li>
-                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="right" title="Archive"><span class="glyphicon glyphicon-book style_side_menu" aria-hidden="true"></span></a>
+                        <a class="menu_tooltip" href="{{ site.baseurl }}/archive" data-toggle="tooltip" data-placement="right" title="Archive"><span class="glyphicon glyphicon-book style_side_menu" aria-hidden="true"></span></a>
                     </li>
                     <li>
-                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="right" title="Projects"><span class="glyphicon glyphicon-cog style_side_menu" aria-hidden="true"></span></a>
+                        <a class="menu_tooltip" href="{{ site.baseurl }}/projects" data-toggle="tooltip" data-placement="right" title="Projects"><span class="glyphicon glyphicon-cog style_side_menu" aria-hidden="true"></span></a>
                     </li>
                     <li>
-                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="right" title="Cheats"><span class="glyphicon glyphicon-info-sign style_side_menu" aria-hidden="true"></span></a>
+                        <a class="menu_tooltip" href="{{ site.baseurl }}/cheats" data-toggle="tooltip" data-placement="right" title="Cheats"><span class="glyphicon glyphicon-info-sign style_side_menu" aria-hidden="true"></span></a>
                     </li>
                 </ul>
             </div>

@@ -4,7 +4,7 @@ title: archive
 permalink: /archive/
 ---
 
-# archive
+# Archive
 
 Some information about you!
 
