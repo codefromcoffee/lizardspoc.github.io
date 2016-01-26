@@ -252,3 +252,78 @@
     text-decoration: none;
     color: #FF9900;
 }
+
+        /* Menu Tooltip */
+        
+        .menu_tooltip + .tooltip > .tooltip-inner {
+            background-color: #FF9900;
+            color: #000000;
+            border: 1px solid #FF9900;
+            padding: 10px;
+            font-size: 14px;
+        }
+        
+        .menu_tooltip + .tooltip.right > .tooltip-arrow {
+            border-right: 5px solid #FF9900;
+        }
+        
+        .menu_tooltip + .tooltip.left > .tooltip-arrow {
+            border-left: 5px solid #FF9900;
+            /*opacity: 1;
+            filter: alpha(opacity=40);*/
+        }
+        
+        .menu_tooltip + .tooltip.bottom > .tooltip-arrow {
+            border-bottom: 5px solid #FF9900;
+        }
+        
+        .menu_tooltip + .tooltip.top > .tooltip-arrow {
+            border-top: 5px solid #FF9900;
+        }
+        /* Side Menu */
+        
+        .affix_side_menu {
+            top: 35px;
+            text-align: center;
+        }
+        
+        .style_side_menu {
+            font-size: 30px;
+            color: #FF9900;
+        }
+        
+        .nav>li>a:focus,
+        .nav>li>a:hover {
+            text-decoration: none;
+            background-color: #FFFFFF;
+        }
+        /* Bottom Menu */
+        
+        .style_bottom_menu {
+            font-size: 20px;
+            color: #FF9900;
+        }
+        /* Navbar */
+        /* Navbar Top */
+        
+        .navbar-fixed-top {
+            background-color: #FFFFFF;
+            border-color: #FFFFFF;
+            min-height: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .navbar-fixed-bottom {
+            background-color: #FFFFFF;
+            border-color: #FFFFFF;
+            min-height: 15px;
+        }
+        
+        /* Social Buttons */
+        
+        .social {
+            color: #FF9900;
+            text-decoration: none;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
