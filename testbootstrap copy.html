@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script>
+        /* Menu Tooltip */
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip({trigger: "hover", animation: false}); 
+        });
+    </script>
+
+    <style>
+@media (min-width: 768px) {
+  .navbar-collapse {
+    height: auto;
+    border-top: 0;
+    box-shadow: none;
+    max-height: none;
+    padding-left:0;
+    padding-right:0;
+  }
+  .navbar-collapse.collapse {
+    display: block !important;
+    width: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .navbar-collapse.in {
+    overflow-x: visible;
+  }
+
+.navbar
+{
+	max-width:300px;
+	margin-right: 0;
+	margin-left: 0;
+}	
+
+.navbar-nav,
+.navbar-nav > li,
+.navbar-left,
+.navbar-right,
+.navbar-header
+{float:none !important;}
+
+.navbar-right .dropdown-menu {left:0;right:auto;}
+.navbar-collapse .navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+}
+}        
+        
+        /* Menu Tooltip */
+        
+        .menu_tooltip + .tooltip > .tooltip-inner {
+            background-color: #FF9900;
+            color: #000000;
+            border: 1px solid #FF9900;
+            padding: 10px;
+            font-size: 14px;
+        }
+        
+        .menu_tooltip + .tooltip.right > .tooltip-arrow {
+            border-right: 5px solid #FF9900;
+        }
+        
+        .menu_tooltip + .tooltip.left > .tooltip-arrow {
+            border-left: 5px solid #FF9900;
+            /*opacity: 1;
+            filter: alpha(opacity=40);*/
+        }
+        
+        .menu_tooltip + .tooltip.bottom > .tooltip-arrow {
+            border-bottom: 5px solid #FF9900;
+        }
+        
+        .menu_tooltip + .tooltip.top > .tooltip-arrow {
+            border-top: 5px solid #FF9900;
+        }
+        /* Side Menu */
+        
+        .affix_side_menu {
+            top: 60px;
+        }
+        
+        .style_side_menu {
+            font-size: 30px;
+            color: #FF9900;
+        }
+        
+        .container {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#" data-toggle="tooltip" title="Home">Home</a></li>
+                <li><a href="#" data-toggle="tooltip" title="Archive">Archive</a></li>
+                <li><a href="#" data-toggle="tooltip" title="Projects">Projects</a></li>
+                <li><a href="#" data-toggle="tooltip" title="Cheatsheets">Cheatsheets</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--<div class="container-fluid" style="background-color:#2196F3;color:#fff;height:200px;">
+        <h1>Bootstrap Affix Example</h1>
+        <h3>Fixed (sticky) vertical sidenav on scroll</h3>
+        <p>Scroll this page to see how the left navigation menu behaves with data-spy="affix".</p>
+        <p><strong>The left menu sticks to the page when you have scrolled a specified amount of pixels.</strong></p>
+    </div>
+    <br>-->
+
+
+    <div class="container">
+        <!--<div class="jumbotron" data-spy="affix-top">
+            <h1>My First Bootstrap Page</h1>
+            <p>Resize this responsive page to see the effect!</p>
+        </div>-->
+        <!--<div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron" data-spy="affix-top">
+                    <h1>My First Bootstrap Page</h1>
+                    <p>Resize this responsive page to see the effect!</p>
+                </div>
+            </div>
+        </div>-->
+        <div class="row">
+            <nav class="col-sm-1">
+                <ul class="nav nav-pills nav-stacked affix_side_menu" data-spy="affix">
+                    <!--<li class="active"><a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Home"><span class="glyphicon glyphicon-home" aria-hidden="true" style="font-size: 20px;"></span></a></li>-->
+                    <li>
+                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Home"><span class="glyphicon glyphicon-home style_side_menu" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Archive"><span class="glyphicon glyphicon-book style_side_menu" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Projects"><span class="glyphicon glyphicon-cog style_side_menu" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Cheatsheets"><span class="glyphicon glyphicon-info-sign style_side_menu" aria-hidden="true"></span></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="col-sm-11" style="position: static;">
+                <h3>Column 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

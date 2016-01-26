@@ -1,89 +1,176 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 
 <head>
-	<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    {% include meta.html %} {% include header_resources.html %} {% include rss.html %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>-->
 
-	{% include meta.html %} 
-	{% include header_resources.html %} 
-	{% include rss.html %}
+    <script>
+        /* Menu Tooltip */
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip({trigger: "hover", animation: false}); 
+        });
+        
+        // $(window).on('resize load', function() {
+        //     $('body').css({"padding-top": $(".navbar").height() + "px"});
+        // });
+    </script>
 
+    <style>
+        /* Menu Tooltip */
+        
+        .menu_tooltip + .tooltip > .tooltip-inner {
+            background-color: #FF9900;
+            color: #000000;
+            border: 1px solid #FF9900;
+            padding: 10px;
+            font-size: 14px;
+        }
+        
+        .menu_tooltip + .tooltip.right > .tooltip-arrow {
+            border-right: 5px solid #FF9900;
+        }
+        
+        .menu_tooltip + .tooltip.left > .tooltip-arrow {
+            border-left: 5px solid #FF9900;
+            /*opacity: 1;
+            filter: alpha(opacity=40);*/
+        }
+        
+        .menu_tooltip + .tooltip.bottom > .tooltip-arrow {
+            border-bottom: 5px solid #FF9900;
+        }
+        
+        .menu_tooltip + .tooltip.top > .tooltip-arrow {
+            border-top: 5px solid #FF9900;
+        }
+        /* Side Menu */
+        
+        .affix_side_menu {
+            top: 35px;
+            text-align: center;
+        }
+        
+        .style_side_menu {
+            font-size: 30px;
+            color: #FF9900;
+        }
+        
+        .nav>li>a:focus,
+        .nav>li>a:hover {
+            text-decoration: none;
+            background-color: #FFFFFF;
+        }
+        /* Bottom Menu */
+        
+        .style_bottom_menu {
+            font-size: 20px;
+            color: #FF9900;
+        }
+        /* Navbar */
+        /* Navbar Top */
+        
+        .navbar-fixed-top {
+            background-color: #FFFFFF;
+            border-color: #FFFFFF;
+            min-height: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .navbar-fixed-bottom {
+            background-color: #FFFFFF;
+            border-color: #FFFFFF;
+            min-height: 15px;
+        }
+        /* Social Buttons */
+        
+        .social {
+            color: #FF9900;
+            text-decoration: none;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    </style>
 </head>
 
-<body>
-	<div id="st-container" class="st-container">
-		<nav class="st-menu st-effect-11" id="menu-11">
-			<ul>
-				<li style="text-align:center;"><a title="home" class="fa fa-home fa-2x" href="{{ site.baseurl }}/"></a></li>
-				<li style="text-align:center;"><a title="archive" class="fa fa-book fa-2x" href="{{ site.baseurl }}/archive"></a></li>
-				<li style="text-align:center;"><a title="projects" class="fa fa-lightbulb-o fa-2x" href="{{ site.baseurl }}/projects"></a></li>
-				<li style="text-align:center;"><a title="cheatsheets" class="fa fa-life-ring fa-2x" href="{{ site.baseurl }}/cheatsheets"></a></li>
-
-				<!--<li><a class="fa fa-book fa-lg" href="{{ site.baseurl }}/blog"> blog</a></li>-->
-				<!--<li><a class="fa fa-envelope-o fa-lg" href="#"> contact</a></li>-->
-				<!--<li><a class="fa fa-coffee fa-sm" href="{{ site.baseurl }}/about"> about</a></li>-->
-			</ul>
-		</nav>
-		<!-- content push wrapper -->
-		<div class="st-pusher">
-			<div class="st-content">
-				<!-- this is the wrapper for the content -->
-				<div class="st-content-inner">
-					<!-- extra div for emulating position:fixed of the menu -->
-					<!-- Top Navigation -->
-					<div class="container-fluid" data-spy="affix" style="z-index:100;">
-						<div class="row" style="z-index:100; background-color: white;">
-							<div class="col-sm-12">
-								<div id="st-trigger-effects" class="pull-left center-block" style="margin-top:5px;margin-bottom:5px;">
-									<span style="border-bottom: solid 2px #FF9900; margin-left: 5px;">
-										<a 
-										href="{{ site.baseurl }}/" 
-										style="margin-left:5px; color:#FF9900; font-size:20px; font-weight:bold;" 
+<body style="height: 100%; padding-top: 35px; padding-bottom: 50px;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid" style="margin-top: 5px; margin-right: 15px;">
+            <span style="border-bottom: solid 2px #FF9900; margin-left: 5px;">
+										<a
+										href="{{ site.baseurl }}/"
+										style="margin-left:5px; color:#FF9900; font-size:20px; font-weight:normal; text-decoration: none;"
 										class="lead justify site_title">{{ site.name }}</a>
 										<small>
 											<span style="font-style: italic; color: #000000; font-size: 14px;">
 												{{ site.description }}</span>
-										</small>
-									</span>									
-									<button type="button" class="btn btn-default pull-left btn-sm" data-effect="st-effect-11">
-										<i class="fa fa-bars fa-lg"></i>
-									</button>
-								</div>
-							</div>
-							
-						</div>
-						
-						<!--ORIGINAL: Using an actual search page :)						-->
-						<!--<div class="row"> 
-							<div class="col-sm-12 text-right"> 
-								<form role="search" method="get" action="{{site.baseurl}}/search/" class="search-form"> 
-									<div class="form-group has-feedback"> 
-										<label for="search" class="sr-only">Search</label> 
-										<input id="searchString" name="searchString" type="text" class="form-control" placeholder="search..."> 
-										<span class="glyphicon glyphicon-search form-control-feedback"></span> 
-									</div> 
-								</form> 
-							</div> 
-						</div>-->
-						
-						<div class="row"> 
-							<div class="col-sm-12" >								
-								<form role="search" method="get" class="search-form"> 
-									<div class="form-group has-feedback"> 
-										<label for="search" class="sr-only">Search</label> 
-										<input id="q" name="q" type="text" class="form-control" placeholder="search..." style="height: 25px;"> 
-										<!--<span class="glyphicon glyphicon-search form-control-feedback"></span>-->
-										<span class="fa fa-search fa-lg form-control-feedback" style="color: #FF9900;text-decoration: none; border: none;"></span> 
-									</div> 
-								</form>
-								{% include social-icons.html %}
-							</div>
-						</div>
-						
-					<div class="row"> 
-						<div class="col-sm-12"> 
-<script>
-  (function() {
+            </small>
+            </span>
+            <ul class="nav navbar-nav navbar-right">
+                <a target="_blank" title="twitter" class="social fa fa-twitter fa-lg" href="https://www.twitter.com/{{ site.footer-links.twitter }}"></a>
+                <a target="_blank" title="rss" class="social fa fa-rss fa-lg" href="{{ site.baseurl }}/feed.xml"></a>
+                <a target="_blank" title="linkedin" class="social fa fa-linkedin-square fa-lg" href="https://za.linkedin.com/in/{{ site.footer-links.linkedin }}"></a>
+                <a target="_blank" title="github" href="https://github.com/{{ site.footer-links.github }}" class="social fa fa-github fa-lg"></a>
+                <a target="_blank" title="stackoverflow" class="social fa fa-stack-overflow fa-lg" href="http://stackoverflow.com/{{ site.footer-links.stackoverflow }}"></a>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom hidden-lg hidden-md">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav" style="margin: 0 auto;width: 100%;text-align: center;">
+                <li style="float: none;display: inline-block;">
+                    <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Home"><span class="glyphicon glyphicon-home style_bottom_menu" aria-hidden="true"></span></a>
+                </li>
+                <li style="float: none;display: inline-block;">
+                    <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Archive"><span class="glyphicon glyphicon-book style_bottom_menu" aria-hidden="true"></span></a>
+                </li>
+                <li style="float: none;display: inline-block;">
+                    <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Projects"><span class="glyphicon glyphicon-cog style_bottom_menu" aria-hidden="true"></span></a>
+                </li>
+                <li style="float: none;display: inline-block;">
+                    <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Cheats"><span class="glyphicon glyphicon-info-sign style_bottom_menu" aria-hidden="true"></span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
+                <ul class="nav nav-pills nav-stacked affix_side_menu" data-spy="affix" data-offset-top="0">
+                    <li>
+                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Home"><span class="glyphicon glyphicon-home style_side_menu" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Archive"><span class="glyphicon glyphicon-book style_side_menu" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Projects"><span class="glyphicon glyphicon-cog style_side_menu" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a class="menu_tooltip" href="#" data-toggle="tooltip" data-placement="auto right" title="Cheats"><span class="glyphicon glyphicon-info-sign style_side_menu" aria-hidden="true"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12">
+                {{content}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
+                <script>
+                    (function() {
     var cx = '010472338623826682351:xzzfzca16dc';
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
@@ -93,47 +180,12 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
   })();
-</script>
-<gcse:searchresults-only></gcse:searchresults-only>
-						</div>
-					</div>												
-					</div>				
-					
-					<div class="main clearfix main_content container-fluid">
-						{{ content }}
-					</div>
-					<!-- /main -->
-				</div>
-				<!-- /st-content-inner -->
-			</div>
-			<!-- /st-content -->
-		</div>
-		<!-- /st-pusher -->
-	</div>
-	<!-- /st-container -->
-	<script src="{{ site.baseurl }}/javascript/classie.js"></script>
-	<script src="{{ site.baseurl }}/javascript/sidebarEffects.js"></script>
-	
-	{% include analytics.html %}
+                </script>
+                <gcse:searchresults-only></gcse:searchresults-only>
+            </div>
+        </div>
+    </div>
+    {% include analytics.html %}
 </body>
-</html>
 
-						<!--<div class="row">
-							<div class="col-sm-12">
- <div class="grid" id="searchBar">
-     <div class="text-center">
-	<form role="search" method="get" class="form-inline" action="{{site.baseurl}}/search/">
-		<input id="searchString" name="searchString" type="text" class="form-control" placeholder="search...">
-		<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></button>
-	</form>
-	</div>
-</div>
-</div>
-</div>						-->
- 						
-						 
-						<!--<div class="row">
-							<div class="col-sm-12" style="border-top: solid 1px #FF9900;">
-								<hr/>
-							</div>
-						</div>-->
+</html>
