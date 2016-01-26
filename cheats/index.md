@@ -1,10 +1,10 @@
 ---
-title: cheatsheets
-permalink: /cheatsheets/
+title: cheats
+permalink: /cheats/
 layout: page
 sitemap: false
 ---
 
-# Cheatsheets
+# Cheats
 
 This is the placeholder for my cheatsheets landing page.
