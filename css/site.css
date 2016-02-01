@@ -1,7 +1,8 @@
 .site_title {
-	color: orange;
+	color: #FF9900;
 	font-size: 20px;
-	margin-left:5px; 
+	margin-left:5px;
+    margin-right:5px; 
 	font-weight:bold;
 }
 
@@ -257,7 +258,7 @@
         
         .menu_tooltip + .tooltip > .tooltip-inner {
             background-color: #FF9900;
-            color: #000000;
+            color: #FFFFFF;
             border: 1px solid #FF9900;
             padding: 10px;
             font-size: 14px;
@@ -284,11 +285,12 @@
         
         .affix_side_menu {
             top: 35px;
-            text-align: center;
+            /*text-align: center;*/
+            text-align: left;
         }
         
         .style_side_menu {
-            font-size: 30px;
+            font-size: 25px;
             color: #FF9900;
         }
         
@@ -297,6 +299,7 @@
             text-decoration: none;
             background-color: #FFFFFF;
         }
+
         /* Bottom Menu */
         
         .style_bottom_menu {

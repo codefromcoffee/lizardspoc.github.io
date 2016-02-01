@@ -1,17 +1,15 @@
 ---
 layout: page
-title: archive
+title: Archive
 permalink: /archive/
 ---
 
-# Archive
-
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+  
+{% for post in site.posts %}
+<div class="list-group">
+    <a href="{{ site.baseurl }}/{{ post.permalink }}" class="list-group-item" style="border: none;">
+      <h4 class="list-group-item-heading">{{ post.title }}</h4>
+      <p class="list-group-item-text">{{ post.content | strip_html | truncatewords:75}}</p>
+    </a>
+</div>
+{% endfor %}

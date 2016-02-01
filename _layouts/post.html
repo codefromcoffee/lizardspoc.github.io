@@ -1,20 +1,25 @@
----
-layout: default
+--- 
+layout: default 
 ---
 
 <article class="post" style="margin-bottom: 50px;">
-  <!-- <h1>{{ page.title }}</h1> -->
+    <!-- <h1>{{ page.title }}</h1> -->
 
-  <h2 class="text-center">{{ page.title }}</h2>
-  <!--<hr/>-->
+    <!--<h3 class="text-center">{{ page.title }}</h3>-->
+    <br/>
+    <!--<p class="lead">{{ page.title }}</p>-->
+    <h4>{{ page.title }}</h4>
 
-  <div class="entry">
-    {{ content }}
-  </div>
+    <hr/>
 
-  <div class="date pull-right" style="font-weight: bold; font-size: 12px;">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
+    <div class="entry">
+        {{ content }}
+    </div>
+
+    <div class="date pull-right" style="font-size: 10px;">
+        Written on {{ page.created | date: "%B %e, %Y" }}
+        <br/> {% if page.created != page.updated %} Updated on {{ page.updated | date: "%B %e, %Y" }} {% endif %}
+    </div>
 </article>
 
 {% include disqus.html %}
