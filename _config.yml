@@ -59,6 +59,9 @@ baseurl: ""
 markdown: redcarpet
 highlighter: pygments
 permalink: /:title/
+
+permalink: /404.html 
+
 # permalink: /:categories/:title
 # permalink: /:categories/:year/:month/:day/:title.html
 
