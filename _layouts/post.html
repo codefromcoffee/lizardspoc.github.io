@@ -22,4 +22,19 @@ layout: default
     </div>
 </article>
 
+<nav>
+  <ul class="pager">
+    {% if page.previous.url %}
+        <li><a href="{{ page.previous.permalink }}" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>        
+    {% else %}
+        <li class="disabled"><a class="disabled" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>        
+    {% endif %}
+    {% if page.next.url %}
+        <li><a href="{{ page.next.permalink }}" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>
+    {% else %}
+        <li class="disabled"><a class="disabled" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>            
+    {% endif %}
+  </ul>
+</nav>
+
 {% include disqus.html %}

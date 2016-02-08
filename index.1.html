@@ -21,17 +21,17 @@ layout: default
 
     <div class="date pull-right" style="font-size: 10px;">
         Written on {{ post.created | date: "%B %e, %Y" }}
-         {% if post.created != post.updated %} Updated on {{ post.updated | date: "%B %e, %Y" }} {% endif %}
+        <br/> {% if post.created != post.updated %} Updated on {{ post.updated | date: "%B %e, %Y" }} {% endif %}
     </div>
     
-<!--<div class="PageNavigation">
+<div class="PageNavigation">
     {% if post.previous.url %}
         <a class="prev" href="{{ post.previous.url }}">{{ post.previous.permalink }}</a>
     {% endif %}
     {% if post.next.url %}
         <a class="next" href="{{ post.next.url }}">{{ post.next.permalink }}</a>
     {% endif %}
-</div>    -->
+</div>    
     
 </article>
 
@@ -48,23 +48,6 @@ layout: default
 
 <nav>
   <ul class="pager">
-    {% for post in paginator.posts %}
-        {% if post.previous.url %}
-            <li><a href="{{ post.previous.permalink }}" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>        
-        {% else %}
-            <li class="disabled"><a class="disabled" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>        
-        {% endif %}
-        {% if post.next.url %}
-            <li><a href="{{ post.next.permalink }}" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>
-        {% else %}
-            <li class="disabled"><a class="disabled" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>            
-        {% endif %}
-    {% endfor %}
-  </ul>
-</nav>
-
-<!--<nav>
-  <ul class="pager">
       {% if paginator.previous_page %}
     <li><a href="{{ paginator.previous_page_path }}" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>
     {% else %}
@@ -76,4 +59,4 @@ layout: default
     <li class="disabled"><a class="disabled" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>
     {% endif %}
   </ul>
-</nav>-->
+</nav>
