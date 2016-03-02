@@ -2,15 +2,11 @@
 <html lang="en">
 
 <head>
-    <!--<link rel="shortcut icon" type="image/png" href="/favicon.png?">-->
-    <!--<link rel="shortcut icon" type="image/ico" href="/favicon.ico?">-->
-    <!--<link rel="shortcut icon" type="image/png" href="{{ "/favicon.png" | prepend: site.baseurl }}" >-->
-
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-    {% include meta.html %} 
-    {% include header_resources.html %} 
+    {% include meta.html %}
+    {% include header_resources.html %}
     {% include rss.html %}
 
     <meta charset="utf-8">
@@ -20,34 +16,24 @@
     <script>
         /* Menu Tooltip */
         $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip({trigger: "hover", animation: false}); 
+            $('[data-toggle="tooltip"]').tooltip({trigger: "hover", animation: false});
         });
     </script>
 </head>
 
 <body style="height: 100%; padding-top: 35px; padding-bottom: 50px;">
     <nav class="navbar navbar-default navbar-fixed-top">
-        <!--<div class="container-fluid" style="margin-top: 5px; margin-right: 15px; margin-left: 0px;">-->
         <div class="container-fluid" style="margin-top: 5px;">
-            <!--<span style="border-bottom: solid 2px #FF9900; margin-left: 5px;">-->
-            <!--<span style="margin-left: 50px;">-->
             <span>
-										<a
-										href="{{ site.baseurl }}/"
-										style="color:#FF9900; font-size:20px; font-weight:normal; text-decoration: none;"
-										class="lead justify site_title">{{ site.name }}</a>
-										<small>
-											<span style="font-style: italic; color: #000000; font-size: 14px;">
-												{{ site.description }}</span>
+                <a
+                href="{{ site.baseurl }}/"
+                style="color:#FF9900; font-size:20px; font-weight:normal; text-decoration: none;"
+                class="lead justify site_title">{{ site.name }}</a>
+                <small>
+                    <span style="font-style: italic; color: #000000; font-size: 14px;">
+                        {{ site.description }}</span>
             </small>
             </span>
-            <!--<ul class="nav navbar-nav navbar-right">
-                <a target="_blank" title="twitter" class="social fa fa-twitter fa-lg" href="https://www.twitter.com/{{ site.footer-links.twitter }}"></a>
-                <a target="_blank" title="rss" class="social fa fa-rss fa-lg" href="{{ site.baseurl }}/feed.xml"></a>
-                <a target="_blank" title="linkedin" class="social fa fa-linkedin-square fa-lg" href="https://za.linkedin.com/in/{{ site.footer-links.linkedin }}"></a>
-                <a target="_blank" title="github" href="https://github.com/{{ site.footer-links.github }}" class="social fa fa-github fa-lg"></a>
-                <a target="_blank" title="stackoverflow" class="social fa fa-stack-overflow fa-lg" href="http://stackoverflow.com/{{ site.footer-links.stackoverflow }}"></a>
-            </ul>-->
         </div>
     </nav>
 
@@ -74,9 +60,9 @@
                 <li style="float: none;display: inline-block;">
                     <a class="menu_tooltip" href="{{ site.baseurl }}/" title="Home"><span class="glyphicon glyphicon-home style_bottom_menu" aria-hidden="true"></span></a>
                 </li>
-                <li style="float: none;display: inline-block;">
+                <!--<li style="float: none;display: inline-block;">
                     <a class="menu_tooltip" href="{{ site.baseurl }}/archive" title="Archive"><span class="glyphicon glyphicon-book style_bottom_menu" aria-hidden="true"></span></a>
-                </li>
+                </li>-->
                 <li style="float: none;display: inline-block;">
                     <a class="menu_tooltip" href="{{ site.baseurl }}/projects" title="Projects"><span class="glyphicon glyphicon-cog style_bottom_menu" aria-hidden="true"></span></a>
                 </li>
@@ -94,9 +80,9 @@
                     <li>
                         <a class="menu_tooltip" href="{{ site.baseurl }}/" data-toggle="tooltip" data-placement="right" title="Home"><span class="glyphicon glyphicon-home style_side_menu" aria-hidden="true"></span></a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a class="menu_tooltip" href="{{ site.baseurl }}/archive" data-toggle="tooltip" data-placement="right" title="Archive"><span class="glyphicon glyphicon-book style_side_menu" aria-hidden="true"></span></a>
-                    </li>
+                    </li>-->
                     <li>
                         <a class="menu_tooltip" href="{{ site.baseurl }}/projects" data-toggle="tooltip" data-placement="right" title="Projects"><span class="glyphicon glyphicon-cog style_side_menu" aria-hidden="true"></span></a>
                     </li>
@@ -113,15 +99,15 @@
             <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
                 <script>
                     (function() {
-    var cx = '010472338623826682351:xzzfzca16dc';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
+                        var cx = '010472338623826682351:xzzfzca16dc';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                            '//cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
                 </script>
                 <gcse:searchresults-only></gcse:searchresults-only>
             </div>

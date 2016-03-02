@@ -1,79 +1,32 @@
 ---
 layout: default
-
+title: Blog
 ---
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-<article class="post" style="margin-bottom: 50px;">
-    <!-- <h1>{{ page.title }}</h1> -->
+  <br/>
+  <p class="lead"><a style="color:#FF9900;" href="{{ post.url }}">{{ post.title }}</a></p>
+  <hr/>
 
-    <!--<h3 class="text-center">{{ page.title }}</h3>-->
-    <!--<br/>-->
-    <!--<p class="lead">{{ page.title }}</p>-->
-    <h4>{{ post.title }}</h4>
-
-    <hr/>
-
-    <div class="entry">
-        {{ post.content }}
-    </div>
-
-    <div class="date pull-right" style="font-size: 10px;">
-        Written on {{ post.created | date: "%B %e, %Y" }}
-         {% if post.created != post.updated %} Updated on {{ post.updated | date: "%B %e, %Y" }} {% endif %}
-    </div>
-    
-<!--<div class="PageNavigation">
-    {% if post.previous.url %}
-        <a class="prev" href="{{ post.previous.url }}">{{ post.previous.permalink }}</a>
-    {% endif %}
-    {% if post.next.url %}
-        <a class="next" href="{{ post.next.url }}">{{ post.next.permalink }}</a>
-    {% endif %}
-</div>    -->
-    
-</article>
-
-
-
-  <!--<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date }}</span>
-  </p>
   <div class="content">
-    {{ post.content }}
-  </div>-->
+    {{ post.content | strip_html | truncatewords:75}}
+  </div>
 {% endfor %}
 
+<!-- Pagination links -->
 <nav>
   <ul class="pager">
-    {% for post in paginator.posts %}
-        {% if post.previous.url %}
-            <li><a href="{{ post.previous.permalink }}" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>        
-        {% else %}
-            <li class="disabled"><a class="disabled" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>        
-        {% endif %}
-        {% if post.next.url %}
-            <li><a href="{{ post.next.permalink }}" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>
-        {% else %}
-            <li class="disabled"><a class="disabled" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>            
-        {% endif %}
-    {% endfor %}
-  </ul>
-</nav>
-
-<!--<nav>
-  <ul class="pager">
-      {% if paginator.previous_page %}
+  {% if paginator.previous_page %}
     <li><a href="{{ paginator.previous_page_path }}" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>
-    {% else %}
+  {% else %}
     <li class="disabled"><a class="disabled" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>
   {% endif %}
-  {% if paginator.next_page %}  
+  <span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
     <li><a href="{{ paginator.next_page_path }}" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>
-    {% else %}
+  {% else %}
     <li class="disabled"><a class="disabled" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>
-    {% endif %}
-  </ul>
-</nav>-->
+  {% endif %}
+</ul>
+</nav>

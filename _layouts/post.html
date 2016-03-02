@@ -1,15 +1,10 @@
---- 
-layout: default 
+---
+layout: default
 ---
 
 <article class="post" style="margin-bottom: 50px;">
-    <!-- <h1>{{ page.title }}</h1> -->
-
-    <!--<h3 class="text-center">{{ page.title }}</h3>-->
     <br/>
-    <!--<p class="lead">{{ page.title }}</p>-->
-    <h4>{{ page.title }}</h4>
-
+    <p class="lead">{{ page.title }}</p>
     <hr/>
 
     <div class="entry">
@@ -25,14 +20,14 @@ layout: default
 <nav>
   <ul class="pager">
     {% if page.previous.url %}
-        <li><a href="{{ page.previous.permalink }}" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>        
+        <li><a href="{{ page.previous.permalink }}" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>
     {% else %}
-        <li class="disabled"><a class="disabled" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>        
+        <li class="disabled"><a class="disabled" title="previous"><span class="glyphicon glyphicon-arrow-left style_bottom_menu" aria-hidden="true"></span></a></li>
     {% endif %}
     {% if page.next.url %}
         <li><a href="{{ page.next.permalink }}" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>
     {% else %}
-        <li class="disabled"><a class="disabled" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>            
+        <li class="disabled"><a class="disabled" title="next"><span class="glyphicon glyphicon-arrow-right style_bottom_menu" aria-hidden="true"></span></a></li>
     {% endif %}
   </ul>
 </nav>
